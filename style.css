@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #3A3838;
+}
+
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* HEADER START */
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
+
+.header__nav-list {
+    display: flex;
+    column-gap: 15px;
+}
+
+.header__nav-link {
+    color: var(--color);
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.header__nav-link:hover {
+    color: #EF4423;
+}
+
+.header__img {
+    margin-bottom: 36px;
+}
+
+/* HEADER END */
+
+/* MAIN START */
+
+.main {
+    margin-bottom: 50px;
+}
+
+.main__content {
+    display: flex;
+}
+
+.main__content-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__about-title {
+    color: #fff;
+    font-size: 19px;
+    line-height: 22px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card__about-desctription {
+    color: #ebebeb;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.card__img {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.card__about-1 {
+    padding: 8px 15px 15px 15px;
+    background: #B71C1C;
+}
+
+.card__about-2 {
+    padding:  15px 15px 8px 15px;
+    background: #6A1B9A;
+}
+
+.card__about-3 {
+    padding: 8px 15px 15px 15px;
+    background: #303F9F;
+}
+
+.card__about-4 {
+    padding:  15px 15px 8px 15px;
+    background: #00695C;
+}
+
+.main__content-title {
+    text-align: center;
+    margin: 40px 0;
+    color: #3A3838;
+    font-size: 22px;
+    line-height: 25px;
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+
+.main_content-2 {
+    background: #ebebeb;
+}
+
+.main__content-tablet {
+    display: flex;
+}
+
+.tablet__info {
+    margin-left: 30px;
+    padding: 20px 0 30px 0;
+}
+
+.tablet__info-title {
+    color: #3A3838;
+    font-size: 22px;
+    line-height: 25px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.tablet__info-description {
+    color: #686868;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    max-width: 540px;
+    width: 100%;
+}
+
+/* MAIN END */
+
+/* FOOTER START */
+
+.footer {
+    background: #3A3838;
+    padding: 28px 0 54px 0;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__content-list {
+    display: flex;
+    column-gap: 15px;
+}
+
+.footer__content-link {
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    transition: 0.7s;
+}
+
+.footer__content-link:hover {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    background: #EF4423;
+    border-radius: 10px;
+}
+
+
+/* MEDIA START */
+
+@media (max-width: 1115px) {
+    .header__nav, .footer__content {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .header__img {
+        width: 100%;
+    }
+
+    .card__img {
+        width: 100%;
+    }
+
+    .tablet__img {
+        width: 100%;
+    }
+
+    .main__content {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .main__content-tablet {
+        flex-wrap: wrap;
+    }
+
+    .tablet__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 830px) {
+    .header__nav, .footer__content {
+        row-gap: 10px;
+    }
+
+    .header__nav-list, .footer__content-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media (max-width:700px) {
+    .main__content {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .header__img {
+        margin-bottom: 15px;
+    }
+
+    .main__content-title {
+        margin: 20px 0;
+    }
+}
